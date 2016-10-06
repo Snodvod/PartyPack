@@ -10,7 +10,7 @@ class UserType extends Model
     	'name', 'description'
     ];
 
-    public function userTypes() {
+    public function user() {
     	return $this->belongsTo('App\User');
     }
 }
