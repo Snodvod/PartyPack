@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Party extends Model
 {
+	protected $table = 'tblParty';
+
     protected $fillable = [
-    	'type'
+    	'name', 'description'
     ];
 
     public function event() {
-    	return $this->belongsToMany('App\Event');
+    	return $this->belongsToMany('App\Event', 'party_id');
     }
 }

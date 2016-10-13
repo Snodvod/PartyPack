@@ -7,15 +7,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    protected $table = 'tblUser';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
-        'name', 'email', 'password',
+        'firstName', 'lastName', 'email', 'password', 'type_id'
     ];
 
     /**
@@ -28,6 +23,10 @@ class User extends Authenticatable
     ];
 
     public function events() {
-        return $this->belongsToMany('App\Event');
+        return $this->belongsToMany('App\Event', 'tblUserEvent', 'user_id', 'event_id');
+    }
+
+    public function occupations() {
+        return $this->belongsToMany('App\Occupation', 'tblUserOccupation', 'user_id', 'occupation_id');
     }
 }

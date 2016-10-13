@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Model::unguard();
+
+        $this->call('UsersTableSeeder');
+        $this->call('CommentsTableSeeder');
+        $this->call('PartiesTableSeeder');
+        $this->call('EventsTableSeeder');
+        $this->call('UserTypesTableSeeder');
+        // $this->call('UserEventsTableSeeder');
+        // $this->call('UserOccupationsTableSeeder');
+        $this->call('OccupationsTableSeeder');
+
+        Model::reguard();
+    }
+
+    private function clear_tables() {
+        \App\User::truncate();
+        \App\Comment::truncate();
+        \App\Event::truncate();
+        \App\Occupation::truncate();
+        \App\Party::truncate();
+        \App\UserEvent::truncate();
+        \App\UserOccupation::truncate();
+        \App\UserType::truncate();
+        DB::table('tblUserEvent')->truncate();
+        DB::table('tblUserOccupation')->truncate();
     }
 }
