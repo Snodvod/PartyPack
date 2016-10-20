@@ -19,8 +19,4 @@
 
 Route::get('/home', 'HomeController@index');
 
-Route::group(['prefix' => 'api'], function () {
-	Route::resource('/user', 'UserController');
-	Route::resource('/event', 'EventController');
-});
 	

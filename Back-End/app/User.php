@@ -29,4 +29,8 @@ class User extends Authenticatable
     public function occupations() {
         return $this->belongsToMany('App\Occupation', 'tblUserOccupation', 'user_id', 'occupation_id');
     }
+
+    public function type() {
+        return $this->belongsTo('App\Type');
+    }
 }

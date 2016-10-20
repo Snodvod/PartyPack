@@ -14,29 +14,43 @@ class EventController extends Controller
 
     }
 
-	//GET USERS
+	//GET EVENTS
     public function index()
     {
-        //GET ALL USERS IN DB 
+        //GET ALL EVENTS IN DB 
     	$events = Event::all();
 
-        //JSON RESPONSE WITH ALL USER(S)
+        //JSON RESPONSE WITH ALL EVENT(S)
     	return response()->json(['data' => $events], 200);
     }
 
-    //GET USER BY ID
+    //GET EVENT BY ID
     public function show($id)
     {
-        //GET USER IN DB BY ID
+        //GET EVENT IN DB BY ID
     	$event = Event::find($id);
 
     	if(!$event)
     	{
-            //JSON RESPONSE IF USER DOESN'T EXIST
+            //JSON RESPONSE IF EVENT DOESN'T EXIST
     		return response()->json(['message' => "This Event doesn't exist.", 'code' => 404], 404);
     	}
 
-        //JSON RESPONSE WITH ALL USER(S)
+        //JSON RESPONSE WITH ALL EVENT(S)
     	return response()->json(['data' => $event], 200);
+    }
+    
+    public function getComments($id)
+    {
+        $event = Event::find($id);
+        $comments = $event->comments()->get();
+
+        if(!$event)
+        {
+            //JSON RESPONSE IF EVENT DOESN'T EXIST
+            return response()->json(['message' => "This Event doesn't exist.", 'code' => 404], 404);
+        }
+
+        return response()->json(['data' => $comments], 200);
     }
 }

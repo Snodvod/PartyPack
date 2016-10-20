@@ -13,6 +13,20 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+
+Route::resource('/event', 'EventController');
+Route::get('/event/comments/{id}', 'EventController@getComments');
+
+// User routes
+
+Route::resource('/user', 'UserController');
+Route::get('/user/occupations/{id}', 'UserController@getOccupations');
+Route::get('/user/type/{id}', 'UserController@getType');
+
+// Type routes
+Route::get('/type', 'TypeController@index');
+Route::get('type/users/{id}', 'TypeController@getUsers');
+
+// Occupation
+Route::resource('/occupation', 'OccupationController');
+Route::get('/occupation/users/{id}', 'OccupationController@getUsers');
