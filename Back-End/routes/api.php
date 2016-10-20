@@ -14,19 +14,19 @@ use Illuminate\Http\Request;
 */
 
 
-Route::resource('/event', 'EventController');
-Route::get('/event/comments/{id}', 'EventController@getComments');
+Route::resource('events', 'EventController');
+Route::get('/events/comments/{id}', 'EventController@getComments');
 
 // User routes
-
-Route::resource('/user', 'UserController');
-Route::get('/user/occupations/{id}', 'UserController@getOccupations');
-Route::get('/user/type/{id}', 'UserController@getType');
+Route::resource('users', 'UserController');
+Route::get('/users/occupations/{id}', 'UserController@getOccupations');
+Route::get('/users/type/{id}', 'UserController@getType');
+Route::get('users/events/{id}', 'UserController@getEvents');
 
 // Type routes
-Route::get('/type', 'TypeController@index');
-Route::get('type/users/{id}', 'TypeController@getUsers');
+Route::get('/types', 'TypeController@index');
+Route::get('types/users/{id}', 'TypeController@getUsers');
 
 // Occupation
-Route::resource('/occupation', 'OccupationController');
-Route::get('/occupation/users/{id}', 'OccupationController@getUsers');
+Route::resource('occupations', 'OccupationController');
+Route::get('/occupations/users/{id}', 'OccupationController@getUsers');

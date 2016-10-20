@@ -56,13 +56,26 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
+        if (!$user) {
+            //JSON RESPONSE IF USER DOESN'T EXIST
+            return response()->json(['message' => "This User doesn't exist.", 'code' => 404], 404);
+        }
         $type = $user->type;
+
+        return response()->json(['data' => $type], 200);
+    }
+
+    public function getEvents()
+    {
+        $user = User::find($id);
 
         if (!$user) {
             //JSON RESPONSE IF USER DOESN'T EXIST
             return response()->json(['message' => "This User doesn't exist.", 'code' => 404], 404);
         }
 
-        return response()->json(['data' => $type], 200);
+        $events = $user->events()->get();
+
+        return response()->json(['data' => $events], 200);
     }
 }
