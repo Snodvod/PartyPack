@@ -1,1 +1,0 @@
-var partypack = angular.module("partypack", ["ui.router"]);
