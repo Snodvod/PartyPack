@@ -9,12 +9,7 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-
-    }
-
-    //GET USERS
+    
     public function index()
     {
         //GET ALL USERS IN DB 
