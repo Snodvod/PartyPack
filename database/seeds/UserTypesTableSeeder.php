@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
-use App\UserType;
+use App\Type;
 
 class UserTypesTableSeeder extends Seeder
 {
@@ -15,21 +15,18 @@ class UserTypesTableSeeder extends Seeder
     {
         $faker = Faker::create('nl_BE');
 
-        UserType::truncate();
+        Type::truncate();
 
-        $userType = UserType::create([
-        	'name' => 'admin',
-        	'description' => $faker->text()
+        $userType = Type::create([
+        	'name' => 'admin'
         ]);
 
-        $userType = UserType::create([
-        	'name' => 'artist',
-        	'description' => $faker->text()
+        $userType = Type::create([
+        	'name' => 'artist'
         ]);
 
-        $userType = UserType::create([
-        	'name' => 'user',
-        	'description' => $faker->text()
+        $userType = Type::create([
+        	'name' => 'user'
         ]);
     }
 }

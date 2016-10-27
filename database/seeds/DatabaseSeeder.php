@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         \App\Party::truncate();
         \App\UserEvent::truncate();
         \App\UserOccupation::truncate();
-        \App\UserType::truncate();
+        \App\Type::truncate();
         DB::table('tblUserEvent')->truncate();
         DB::table('tblUserOccupation')->truncate();
     }
