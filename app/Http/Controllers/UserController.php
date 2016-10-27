@@ -9,7 +9,7 @@ use App\User;
 
 class UserController extends Controller
 {
-    
+
     public function index()
     {
         //GET ALL USERS IN DB 
@@ -21,7 +21,7 @@ class UserController extends Controller
 
     public function showArtists()
     {
-        $artists = User::whereHas('types', function($query) {
+        $artists = User::whereHas('type', function($query) {
            $query->where('name', 'artist');
         })->get();
         
