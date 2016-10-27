@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="container">
+        @include('partials.header')
         @yield('content')
     </div>
 </body>
