@@ -29,6 +29,11 @@ class PartyController extends Controller
         return response()->json(['data' => $party], 200);
     }
 
+    public function showConcepts() 
+    {
+        return view('concepts.index');
+    }
+
     public function store(Request $request)
     {
         Party::create([

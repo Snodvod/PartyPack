@@ -1,5 +1,5 @@
 @extends('master')
 
 @section('content')
-<p>artists</p>
+<p>concepts</p>
 @endsection

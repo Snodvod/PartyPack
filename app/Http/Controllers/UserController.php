@@ -21,11 +21,12 @@ class UserController extends Controller
 
     public function showArtists()
     {
-        $artists = User::whereHas('types', function($query) {
-           $query->where('name', 'artist');
-        })->get();
+        // $artists = User::whereHas('types', function($query) {
+        //    $query->where('name', 'artist');
+        // })->get();
         
-        return view('artists.index', ['artists' => $artists]);
+        // return view('artists.index', ['artists' => $artists]);
+        return view('artists.index');
     }
 
     //GET USER BY ID
