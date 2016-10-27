@@ -5780,14 +5780,18 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat; }
 
 .artist {
-  background-color: #006a4e;
+  background-color: #a4602f;
   height: 700px; }
+  .artist h2, .artist h3 {
+    color: #003082; }
   .artist .head {
     margin-top: 2em;
     margin-bottom: 2em; }
   .artist .picture {
     background-image: url("/img/luan.png");
     height: 578px; }
+  .artist .text {
+    color: white; }
 
 .purpose {
   background-color: #343434;

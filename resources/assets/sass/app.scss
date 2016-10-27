@@ -23,8 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .artist {
-  background-color: $green;
+  background-color: #a4602f;
   height: 700px;
+  
+  h2, h3 {
+    color: $dark-blue;
+  }
   .head {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -32,6 +36,9 @@ h1, h2, h3, h4, h5, h6 {
   .picture {
     background-image: url('/img/luan.png');
     height: 578px;
+  }
+  .text {
+    color: white;
   }
 }
 
