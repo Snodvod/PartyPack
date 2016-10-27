@@ -33,4 +33,8 @@ class User extends Authenticatable
     public function type() {
         return $this->hasOne('App\Type');
     }
+
+    public function mail() {
+        return $this->hasOne('App\Mail');
+    }
 }

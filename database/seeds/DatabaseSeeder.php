@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         // $this->call('UserEventsTableSeeder');
         // $this->call('UserOccupationsTableSeeder');
         $this->call('OccupationsTableSeeder');
+        $this->call('MailTableSeeder');
 
         Model::reguard();
     }
