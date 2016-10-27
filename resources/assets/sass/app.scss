@@ -22,10 +22,63 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 }
 
+.concepts-wrapper {
+  height: 600px;
+  background-color: #0d4203;
+  .all {
+    margin-top: 2em;
+    a {
+      right: 9px;
+      position: absolute;
+    }
+  }
+  .text-center {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .concepts {
+    margin-top: 7%;
+    .concept {
+      background-size: cover;
+      background-position: 50%;
+      height: 250px;
+      padding: 0;
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+      }
+      .overlay {
+        padding-top: 30%;
+        color: white;
+        background: rgba(0, 0, 0, .75);
+        text-align: center;
+        height: 250px;
+        width: 100%;
+        opacity: 0;
+        -webkit-transition: opacity .25s ease;
+        -moz-transition: opacity .25s ease;
+        .text {
+          font-size: 2em;
+        }
+      }
+      &.c1 {
+        background-image: url('/img/brazil.jpg');
+      }
+      &.c2 {
+        background-image: url('/img/jamaica.jpg');
+      }
+      &.c3 {
+        background-image: url('/img/magician.jpg');
+      }
+    }
+  }
+}
+
 .artist {
   background-color: #a4602f;
-  height: 700px;
-  
+  height: 600px;
+
   h2, h3 {
     color: $dark-blue;
   }
@@ -35,10 +88,16 @@ h1, h2, h3, h4, h5, h6 {
   }
   .picture {
     background-image: url('/img/luan.png');
-    height: 578px;
+    height: 478px;
+    background-size: cover;
   }
   .text {
     color: white;
+    margin-top: 4%;
+    a {
+      right: 25px;
+      position: absolute;
+    }
   }
 }
 
@@ -58,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   .carluccio {
     background-image: url('/img/carluccio2.jpg');
     background-size: cover;
-    height: 700px;
+    height: 600px;
   }
 }
 
@@ -69,16 +128,23 @@ h1, h2, h3, h4, h5, h6 {
   background-position-y: 55%;
   background-repeat: no-repeat;
   text-align: center;
-  h1 {
-    margin-top: 55vh;
-    color: white;
+  .text {
+    background-color: rgba(1, 1, 1, .65);
+    padding: 1em;
+    padding-bottom: 1.5em;
+    margin-top: 50vh;
+    border-radius: 9px 4px;
+    h1 {
+      color: white;
+    }
   }
+
   .discover {
     color: white;
     background-size: 3em;
     background-position-x: 50%;
     background-position-y: 100%;
-    margin-top: 32vh;
+    margin-top: 11%;
     height: 5em;
     cursor: pointer;
   }
@@ -86,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   .navbar {
-    padding: 1.5em 0;
+    padding: 1em 0;
     background-color: white;
     .navbar-brand {
       background-image: url('/img/logo.svg');
