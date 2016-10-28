@@ -5779,9 +5779,48 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("/img/down-arrow.svg");
   background-repeat: no-repeat; }
 
+.concepts-wrapper {
+  height: 600px;
+  background-color: #0d4203; }
+  .concepts-wrapper .all {
+    margin-top: 2em; }
+    .concepts-wrapper .all a {
+      right: 9px;
+      position: absolute; }
+  .concepts-wrapper .text-center {
+    margin-top: 2em;
+    margin-bottom: 2em; }
+  .concepts-wrapper .concepts {
+    margin-top: 7%; }
+    .concepts-wrapper .concepts .concept {
+      background-size: cover;
+      background-position: 50%;
+      height: 250px;
+      padding: 0; }
+      .concepts-wrapper .concepts .concept:hover .overlay {
+        opacity: 1; }
+      .concepts-wrapper .concepts .concept .overlay {
+        padding-top: 30%;
+        color: white;
+        background: rgba(0, 0, 0, 0.75);
+        text-align: center;
+        height: 250px;
+        width: 100%;
+        opacity: 0;
+        -webkit-transition: opacity .25s ease;
+        -moz-transition: opacity .25s ease; }
+        .concepts-wrapper .concepts .concept .overlay .text {
+          font-size: 2em; }
+      .concepts-wrapper .concepts .concept.c1 {
+        background-image: url("/img/brazil.jpg"); }
+      .concepts-wrapper .concepts .concept.c2 {
+        background-image: url("/img/jamaica.jpg"); }
+      .concepts-wrapper .concepts .concept.c3 {
+        background-image: url("/img/magician.jpg"); }
+
 .artist {
   background-color: #a4602f;
-  height: 700px; }
+  height: 600px; }
   .artist h2, .artist h3 {
     color: #003082; }
   .artist .head {
@@ -5789,9 +5828,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2em; }
   .artist .picture {
     background-image: url("/img/luan.png");
-    height: 578px; }
+    height: 478px;
+    background-size: cover; }
   .artist .text {
-    color: white; }
+    color: white;
+    margin-top: 4%; }
+    .artist .text a {
+      right: 25px;
+      position: absolute; }
 
 .purpose {
   background-color: #343434;
@@ -5805,7 +5849,7 @@ h1, h2, h3, h4, h5, h6 {
   .purpose .carluccio {
     background-image: url("/img/carluccio2.jpg");
     background-size: cover;
-    height: 700px; }
+    height: 600px; }
 
 .welcome {
   background-image: url("/img/welcome.jpg");
@@ -5814,20 +5858,39 @@ h1, h2, h3, h4, h5, h6 {
   background-position-y: 55%;
   background-repeat: no-repeat;
   text-align: center; }
-  .welcome h1 {
-    margin-top: 55vh;
-    color: white; }
+  .welcome .text {
+    background-color: rgba(1, 1, 1, 0.65);
+    padding: 1em;
+    padding-bottom: 1.5em;
+    margin-top: 50vh;
+    border-radius: 9px 4px; }
+    .welcome .text h1 {
+      color: white; }
   .welcome .discover {
     color: white;
     background-size: 3em;
     background-position-x: 50%;
     background-position-y: 100%;
-    margin-top: 32vh;
+    margin-top: 11%;
     height: 5em;
     cursor: pointer; }
 
+.concept-content {
+  margin-top: 77px; }
+  .concept-content .col-lg-12 {
+    padding: 0; }
+    .concept-content .col-lg-12 .concept {
+      background-size: cover;
+      height: 300px; }
+      .concept-content .col-lg-12 .concept.c1 {
+        background-image: url("/img/brazil.jpg"); }
+      .concept-content .col-lg-12 .concept.c2 {
+        background-image: url("/img/jamaica.jpg"); }
+      .concept-content .col-lg-12 .concept.c3 {
+        background-image: url("/img/magician.jpg"); }
+
 .header .navbar {
-  padding: 1.5em 0;
+  padding: 1em 0;
   background-color: white; }
   .header .navbar .navbar-brand {
     background-image: url("/img/logo.svg");

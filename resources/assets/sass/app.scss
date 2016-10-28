@@ -150,6 +150,28 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// ======== //
+
+.concept-content {
+  margin-top: 77px;
+  .col-lg-12 {
+    padding: 0;
+    .concept {
+      background-size: cover;
+      height: 300px;
+      &.c1 {
+        background-image: url('/img/brazil.jpg');
+      }
+      &.c2 {
+        background-image: url('/img/jamaica.jpg');
+      }
+      &.c3 {
+        background-image: url('/img/magician.jpg');
+      }
+    }
+  }
+}
+
 .header {
   .navbar {
     padding: 1em 0;
