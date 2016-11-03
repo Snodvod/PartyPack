@@ -23,7 +23,7 @@
                 are all
                 artists.</p>
         </div>
-        <div class="carluccio col-lg-offset-2 col-lg-4"></div>
+        <div class="carluccio col-lg-offset-2 col-lg-3"></div>
     </div>
     <div class="row artist">
         <div class="col-lg-12">
@@ -53,13 +53,39 @@
     </div>
     <div class="row concepts-wrapper">
         <div class="col-lg-4 col-lg-offset-4 text-center"><h3>Our most popular concepts</h3></div>
-        <div class="col-lg-12 concepts">
-            <a href="#"><div class="c1 concept col-lg-2 col-lg-offset-2"><div class="overlay"><div class="text">Brazilian shit</div></div></div></a>
-            <a href="#"><div class="c2 concept col-lg-2 col-lg-offset-1"><div class="overlay"><div class="text">Jamaican shit</div></div></div></a>
-            <a href="#"><div class="c3 concept col-lg-2 col-lg-offset-1"><div class="overlay"><div class="text">Magician shit</div></div></div></a>
+        <div class="col-lg-8 col-lg-offset-2 concepts">
+            <div class="row">
+                <a href="#">
+                    <div class="col-lg-4">
+                        <div class="c1 concept">
+                            <div class="overlay">
+                                <div class="text">Brazilian shit</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="col-lg-4">
+                        <div class="c2 concept">
+                            <div class="overlay">
+                                <div class="text">Jamaican shit</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="col-lg-4">
+                        <div class="c3 concept ">
+                            <div class="overlay">
+                                <div class="text">Magician shit</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="col-lg-2 col-lg-offset-8 all">
-        <a href="/concepts">Check out all our concepts ></a>
+            <a href="/concepts">Check out all our concepts ></a>
         </div>
     </div>
 @endsection

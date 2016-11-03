@@ -22,6 +22,79 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 }
 
+.hovereffect {
+  width: 100%;
+  height: 280px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  img {
+    position: relative;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    object-fit: cover;
+  }
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin-top: 22%;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+    &:hover {
+      box-shadow: 0 0 5px #fff;
+    }
+  }
+  a.info, h2 {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    img {
+      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+      filter: grayscale(1) blur(3px);
+      -webkit-filter: grayscale(1) blur(3px);
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    a.info, h2 {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}
+
 .concepts-wrapper {
   height: 600px;
   background-color: #0d4203;
@@ -34,14 +107,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   .text-center {
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
   }
   .concepts {
-    margin-top: 7%;
     .concept {
       background-size: cover;
       background-position: 50%;
-      height: 250px;
+      height: 300px;
       padding: 0;
       &:hover {
         .overlay {
@@ -49,17 +121,17 @@ h1, h2, h3, h4, h5, h6 {
         }
       }
       .overlay {
-        padding-top: 30%;
         color: white;
         background: rgba(0, 0, 0, .75);
         text-align: center;
-        height: 250px;
+        height: 100%;
         width: 100%;
         opacity: 0;
         -webkit-transition: opacity .25s ease;
         -moz-transition: opacity .25s ease;
         .text {
           font-size: 2em;
+          line-height: 300px;
         }
       }
       &.c1 {
@@ -97,6 +169,7 @@ h1, h2, h3, h4, h5, h6 {
     a {
       right: 25px;
       position: absolute;
+      color: black;
     }
   }
 }
@@ -118,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('/img/carluccio2.jpg');
     background-size: cover;
     height: 600px;
+    background-position: 50%;
   }
 }
 
@@ -156,17 +230,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 77px;
   .col-lg-12 {
     padding: 0;
-    .concept {
-      background-size: cover;
-      height: 300px;
-      &.c1 {
-        background-image: url('/img/brazil.jpg');
-      }
-      &.c2 {
-        background-image: url('/img/jamaica.jpg');
-      }
-      &.c3 {
-        background-image: url('/img/magician.jpg');
+    .col-lg-4 {
+      margin-bottom: 30px;
+      .concept {
+        background-size: cover;
+        height: 300px;
       }
     }
   }
