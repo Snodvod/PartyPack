@@ -17,17 +17,17 @@ class CommentsTableSeeder extends Seeder
 
         Comment::truncate();
 
-        $comment = Comment::create([
+        Comment::create([
         	'description' => $faker->text(),
         	'rating' => $faker->randomDigitNotNull()
         ]);
 
-        $comment = Comment::create([
+        Comment::create([
         	'description' => $faker->text(),
         	'rating' => $faker->randomDigitNotNull()
         ]);
 
-        $comment = Comment::create([
+        Comment::create([
         	'description' => $faker->text(),
         	'rating' => $faker->randomDigitNotNull()
         ]);

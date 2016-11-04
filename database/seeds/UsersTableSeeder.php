@@ -21,18 +21,27 @@ class UsersTableSeeder extends Seeder
         DB::table('tblUserEvent')->truncate();
         DB::table('tblUserOccupation')->truncate();
 
-        $user = User::create([
-        	'firstName' => $faker->firstName(),
-        	'lastName' => $faker->lastName(),
+        User::create([
+            'name' => "Eek-a-mouse",
             'email' => $faker->email(),
-            'password' => bcrypt('test')
+            'password' => bcrypt('secret')
         ]);
 
-        $user = User::create([
-        	'firstName' => $faker->firstName(),
-        	'lastName' => $faker->lastName(),
+        User::create([
+        	'name' => 'Dynamo',
             'email' => $faker->email(),
-            'password' => bcrypt('test')
+            'password' => bcrypt('secret')
+        ]);
+
+        User::create([
+            'name' => 'Ozomatli',
+            'email' => $faker->email(),
+            'password' => bcrypt('secret')
+        ]);
+        User::create([
+            'name' => 'Netwerk',
+            'email' => $faker->email(),
+            'password' => bcrypt('secret')
         ]);
     }
 }

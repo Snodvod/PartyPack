@@ -17,19 +17,19 @@ class EventsTableSeeder extends Seeder
 
         Event::truncate();
 
-        $event = Event::create([
+        Event::create([
         	'location' => $faker->address(),
         	'price' => $faker->randomDigit(),
         	'date' => $faker->dateTime()
         ]);
 
-        $event = Event::create([
+        Event::create([
         	'location' => $faker->address(),
         	'price' => $faker->randomDigit(),
         	'date' => $faker->dateTime()
         ]);
 
-        $event = Event::create([
+        Event::create([
         	'location' => $faker->address(),
         	'price' => $faker->randomDigit(),
         	'date' => $faker->dateTime()

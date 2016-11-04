@@ -17,17 +17,17 @@ class OccupationsTableSeeder extends Seeder
 
         Occupation::truncate();
 
-        $occupation = Occupation::create([
+        Occupation::create([
         	'type' => $faker->name(),
         	'description' => $faker->text()
         ]);
 
-        $occupation = Occupation::create([
+        Occupation::create([
         	'type' => $faker->name(),
         	'description' => $faker->text()
         ]);
 
-        $occupation = Occupation::create([
+        Occupation::create([
         	'type' => $faker->name(),
         	'description' => $faker->text()
         ]);

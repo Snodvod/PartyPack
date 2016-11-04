@@ -21,4 +21,9 @@ class Event extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    public function images()
+    {
+        return $this->morphMany('App\Image', 'imageable');
+    }
 }

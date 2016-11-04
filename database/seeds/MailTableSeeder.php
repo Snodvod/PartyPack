@@ -12,7 +12,7 @@ class MailTableSeeder extends Seeder
      */
     public function run()
     {
-        $mail = Mail::create([
+        Mail::create([
             'secret' => bcrypt('test')
         ]);
     }

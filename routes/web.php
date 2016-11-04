@@ -3,8 +3,8 @@
 Auth::routes();
 
 // View routes
-Route::get('artists', 'UserController@showArtists');
-Route::get('concepts', 'PartyController@showConcepts');
+Route::get('/artists', 'UserController@showArtists');
+Route::resource('concepts', 'PartyController');
 
 Route::get('/', 'HomeController@index');
 
@@ -12,8 +12,6 @@ Route::resource('events', 'EventController');
 Route::get('/events/comments/{id}', 'EventController@getComments');
 Route::post('/events/comments/{id}', 'EventController@storeComment');
 
-// Party routes
-Route::resource('parties', 'PartyController');
 
 // User routes
 Route::resource('users', 'UserController');

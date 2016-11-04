@@ -17,18 +17,18 @@ class PartiesTableSeeder extends Seeder
 
         Party::truncate();
 
-        $party = Party::create([
-        	'name' => $faker->name(),
+        Party::create([
+        	'name' => 'Jamaican Reggae delight',
+        	'description' => 'Sweet reggae music & smooth Jamaican vibes are coming your way. Chill out, relax and enjoy a night full of Caribbean delight!'
+        ]);
+
+        Party::create([
+        	'name' => 'South American Fiesta',
         	'description' => $faker->text()
         ]);
 
-        $party = Party::create([
-        	'name' => $faker->name(),
-        	'description' => $faker->text()
-        ]);
-
-        $party = Party::create([
-        	'name' => $faker->name(),
+        Party::create([
+        	'name' => 'Illusionist magic party',
         	'description' => $faker->text()
         ]);
     }

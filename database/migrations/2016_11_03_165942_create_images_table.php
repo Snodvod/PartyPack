@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePartiesTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreatePartiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tblParty', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('description');
             $table->string('image');
-            $table->timestamps();
+            $table->integer('imageable_id');
+            $table->string('imageable_type');
         });
     }
 
@@ -29,6 +28,6 @@ class CreatePartiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tblParty');
+        Schema::drop('images');
     }
 }

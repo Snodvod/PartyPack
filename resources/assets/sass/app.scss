@@ -224,10 +224,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.content {
+  margin-top: 77px;
+  .row {
+    margin: 0;
+    &.head {
+      margin-bottom: 1em;
+      h2 {
+        //text-transform: uppercase;
+        color: black;
+      }
+    }
+  }
+
+}
+
 // ======== //
 
 .concept-content {
-  margin-top: 77px;
   .col-lg-12 {
     padding: 0;
     .col-lg-4 {

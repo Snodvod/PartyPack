@@ -17,15 +17,15 @@ class UserTypesTableSeeder extends Seeder
 
         Type::truncate();
 
-        $userType = Type::create([
+        Type::create([
         	'name' => 'admin'
         ]);
 
-        $userType = Type::create([
+        Type::create([
         	'name' => 'artist'
         ]);
 
-        $userType = Type::create([
+        Type::create([
         	'name' => 'user'
         ]);
     }

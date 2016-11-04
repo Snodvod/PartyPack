@@ -5934,15 +5934,22 @@ h1, h2, h3, h4, h5, h6 {
     height: 5em;
     cursor: pointer; }
 
-.concept-content {
+.content {
   margin-top: 77px; }
-  .concept-content .col-lg-12 {
-    padding: 0; }
-    .concept-content .col-lg-12 .col-lg-4 {
-      margin-bottom: 30px; }
-      .concept-content .col-lg-12 .col-lg-4 .concept {
-        background-size: cover;
-        height: 300px; }
+  .content .row {
+    margin: 0; }
+    .content .row.head {
+      margin-bottom: 1em; }
+      .content .row.head h2 {
+        color: black; }
+
+.concept-content .col-lg-12 {
+  padding: 0; }
+  .concept-content .col-lg-12 .col-lg-4 {
+    margin-bottom: 30px; }
+    .concept-content .col-lg-12 .col-lg-4 .concept {
+      background-size: cover;
+      height: 300px; }
 
 .header .navbar {
   padding: 1em 0;

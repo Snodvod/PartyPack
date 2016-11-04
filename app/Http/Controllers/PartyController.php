@@ -13,7 +13,7 @@ class PartyController extends Controller
     {
         $parties = Party::All();
 
-        return response()->json(['data' => $parties], 200);
+        return view('concepts.index', ['concepts' => $parties]);
     }
 
     public function show($id)
@@ -27,11 +27,6 @@ class PartyController extends Controller
         }
 
         return response()->json(['data' => $party], 200);
-    }
-
-    public function showConcepts() 
-    {
-        return view('concepts.index');
     }
 
     public function store(Request $request)

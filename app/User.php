@@ -22,19 +22,28 @@ class User extends Authenticatable
         'password'
     ];
 
-    public function events() {
+    public function events()
+    {
         return $this->belongsToMany('App\Event', 'tblUserEvent', 'user_id', 'event_id');
     }
 
-    public function occupations() {
+    public function occupations()
+    {
         return $this->belongsToMany('App\Occupation', 'tblUserOccupation', 'user_id', 'occupation_id');
     }
 
-    public function type() {
+    public function type()
+    {
         return $this->hasOne('App\Type');
     }
 
-    public function mail() {
+    public function mail()
+    {
         return $this->hasOne('App\Mail');
+    }
+
+    public function images()
+    {
+        return $this->morphMany('App\Image', 'imageable');
     }
 }

@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         // $this->call('UserOccupationsTableSeeder');
         $this->call('OccupationsTableSeeder');
         $this->call('MailTableSeeder');
+        $this->call('ImagesTableSeeder');
 
         Model::reguard();
     }
