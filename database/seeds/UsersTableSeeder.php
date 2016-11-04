@@ -22,26 +22,44 @@ class UsersTableSeeder extends Seeder
         DB::table('tblUserOccupation')->truncate();
 
         User::create([
+            'name' => "Ino Van Winckel",
+            'email' => "inovanwinckel@hotmail.com",
+            'password' => bcrypt('secret'),
+            'type_id' => 1
+        ]);
+
+        User::create([
+            'name' => "Jonas Van Eeckhout",
+            'email' => "ulti40@hotmail.com",
+            'password' => bcrypt('secret'),
+            'type_id' => 1
+        ]);
+
+        User::create([
             'name' => "Eek-a-mouse",
             'email' => $faker->email(),
-            'password' => bcrypt('secret')
+            'password' => bcrypt('secret'),
+            'type_id' => 2
         ]);
 
         User::create([
         	'name' => 'Dynamo',
             'email' => $faker->email(),
-            'password' => bcrypt('secret')
+            'password' => bcrypt('secret'),
+            'type_id' => 2
         ]);
 
         User::create([
             'name' => 'Ozomatli',
             'email' => $faker->email(),
-            'password' => bcrypt('secret')
+            'password' => bcrypt('secret'),
+            'type_id' => 2
         ]);
         User::create([
             'name' => 'Netwerk',
             'email' => $faker->email(),
-            'password' => bcrypt('secret')
+            'password' => bcrypt('secret'),
+            'type_id' => 2
         ]);
     }
 }

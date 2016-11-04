@@ -4,15 +4,15 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"></a>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="item active"><a href="/"><span>Home</span></a></li>
+                    <li class="item {{isActiveRoute('home')}}"><a href="/"><span>Home</span></a></li>
                     <li class="diamond"></li>
-                    <li class="item"><a href="/artists"><span>Artists</span></a></li>
+                    <li class="item {{areActiveRoutes(['artists.index'])}}"><a href="/artists"><span>Artists</span></a></li>
                     <li class="diamond"></li>
-                    <li class="item"><a href="/concepts"><span>Concepts</span></a></li>
+                    <li class="item {{areActiveRoutes(['concepts.index', 'concepts.show'])}}"><a href="/concepts"><span>Concepts</span></a></li>
                     <li class="diamond"></li>
-                    <li class="item"><a href="/login"><span>Login</span></a></li>
+                    <li class="item {{isActiveRoute('login')}}"><a href="/login"><span>Login</span></a></li>
                     <li class="diamond"></li>
-                    <li class="item"><a href="/register"><span>Register</span></a></li>
+                    <li class="item {{isActiveRoute('register')}}"><a href="/register"><span>Register</span></a></li>
                 </ul>
             </div>
         </nav>

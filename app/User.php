@@ -10,7 +10,7 @@ class User extends Authenticatable
     protected $table = 'tblUser';
 
     protected $fillable = [
-        'firstName', 'lastName', 'email', 'password', 'type_id'
+        'name', 'email', 'password', 'type_id'
     ];
 
     /**
@@ -34,7 +34,7 @@ class User extends Authenticatable
 
     public function type()
     {
-        return $this->hasOne('App\Type');
+        return $this->belongsTo('App\Type');
     }
 
     public function mail()

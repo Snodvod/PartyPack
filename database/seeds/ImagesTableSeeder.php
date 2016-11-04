@@ -16,22 +16,22 @@ class ImagesTableSeeder extends Seeder
 
         Image::create([
             'image' => 'eek.jpg',
-            'imageable_id' => 1,
-            'imageable_type' => 'App\User'
-        ]);
-        Image::create([
-            'image' => 'dynamo.jpg',
-            'imageable_id' => 2,
-            'imageable_type' => 'App\User'
-        ]);
-        Image::create([
-            'image' => 'ozomatli.jpg',
             'imageable_id' => 3,
             'imageable_type' => 'App\User'
         ]);
         Image::create([
-            'image' => 'netwerk.jpg',
+            'image' => 'dynamo.jpg',
             'imageable_id' => 4,
+            'imageable_type' => 'App\User'
+        ]);
+        Image::create([
+            'image' => 'ozomatli.jpg',
+            'imageable_id' => 5,
+            'imageable_type' => 'App\User'
+        ]);
+        Image::create([
+            'image' => 'netwerk.jpg',
+            'imageable_id' => 6,
             'imageable_type' => 'App\User'
         ]);
 

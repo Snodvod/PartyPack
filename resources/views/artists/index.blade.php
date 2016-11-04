@@ -10,33 +10,17 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="hovereffect">
-                            <img class="img-responsive" src="{{asset('/img/eek.jpg')}}" alt="">
-                            <div class="overlay">
-                                <h2>Eek-a-mouse</h2>
-                                <a class="info" href="#">Read more</a>
+                    @foreach($artists as $artist)
+                        <div class="col-lg-4">
+                            <div class="hovereffect">
+                               <img class="img-responsive" src="{{asset('img/' .$artist->images()->first()->image)}}" alt="{{$artist->name}}">
+                                <div class="overlay">
+                                    <h2>{{$artist->name}}</h2>
+                                    <a class="info" href="/artists/{{$artist->id}}">Read more</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="hovereffect">
-                            <img class="img-responsive" src="{{asset('/img/dynamo.jpg')}}" alt="">
-                            <div class="overlay">
-                                <h2>Dynamo</h2>
-                                <a class="info" href="#">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="hovereffect">
-                            <img class="img-responsive" src="{{asset('/img/ozomatli.jpg')}}" alt="">
-                            <div class="overlay">
-                                <h2>Ozomatli</h2>
-                                <a class="info" href="#">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

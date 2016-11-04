@@ -12,21 +12,11 @@ class UserController extends Controller
 
     public function index()
     {
-        //GET ALL USERS IN DB 
-        $users = User::all();
+         $artists = User::whereHas('type', function($query) {
+            $query->where('name', 'artist');
+         })->get();
 
-        //JSON RESPONSE WITH ALL USER(S)
-        return response()->json(['data' => $users], 200);
-    }
-
-    public function showArtists()
-    {
-        // $artists = User::whereHas('type', function($query) {
-        //    $query->where('name', 'artist');
-        // })->get();
-        
-        // return view('artists.index', ['artists' => $artists]);
-        return view('artists.index');
+         return view('artists.index', ['artists' => $artists]);
     }
 
     //GET USER BY ID

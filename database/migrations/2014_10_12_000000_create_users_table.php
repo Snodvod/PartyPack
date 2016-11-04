@@ -55,8 +55,8 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tblUser');
         Schema::drop('tblUserEvent');
         Schema::drop('tblUserOccupation');
+        Schema::drop('tblUser');
     }
 }

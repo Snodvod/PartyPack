@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * include Vue and Vue Resource. This gives a great starting point for
@@ -19,8 +18,15 @@ const app = new Vue({
     el: '#app'
 });
 
-var el = 'x';
 
-var ino = "cool";
+$(window).on('load', function () {
+    console.log('doc ready');
+    $("#js-click-welcome").click(function () {
+        $('html,body').animate({
+           scrollTop: $('.purpose').offset().top -77},
+            'slow');
+    });
+    $(".se-pre-con").fadeOut("slow");
+})
 
 

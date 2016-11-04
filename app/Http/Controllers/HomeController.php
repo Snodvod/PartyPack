@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Party;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,6 +15,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $artist = User::whereHas('type', function($query) {
+            $query->where('name', 'artist');
+        })->take(1)->get();
+
+        $populars = Party::All()->take(3);
+
+
+        return view('index', ['artist' => $artist, 'populars' => $populars]);
     }
 }

@@ -13,20 +13,14 @@ class PartyController extends Controller
     {
         $parties = Party::All();
 
-        return view('concepts.index', ['concepts' => $parties]);
+        return view('concepts.index', ['parties' => $parties]);
     }
 
     public function show($id)
     {
         $party = Party::find($id);
 
-        if (!$party) {
-            //JSON RESPONSE IF PARTY DOESN'T EXIST
-
-            return response()->json(['message' => "This Party doesn't exist.", 'code' => 404], 404);
-        }
-
-        return response()->json(['data' => $party], 200);
+        return view('concepts.detail', ['party' => $party]);
     }
 
     public function store(Request $request)
@@ -36,6 +30,5 @@ class PartyController extends Controller
             'description' => $request->description
         ]);
 
-        return response()->json(['message' => 'New party is created'], 200);
     }
 }
