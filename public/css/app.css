@@ -5780,6 +5780,27 @@ p, h1, h2, h3, h4, h5, h6, span, body {
 
 .concept-detail {
   height: 100%; }
+  .concept-detail h2 {
+    text-transform: capitalize;
+    margin: 1em 0; }
+  .concept-detail p {
+    font-size: medium;
+    margin-bottom: 3em; }
+  .concept-detail .images .head {
+    height: 200px;
+    padding-top: 60px;
+    padding-left: 50px; }
+    .concept-detail .images .head h2 {
+      margin: 0; }
+  .concept-detail .images .image {
+    height: 200px;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in; }
+    .concept-detail .images .image img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .concept-detail.concept1 {
     background: black;
     background-image: url(/img/rasta_stripes.jpg);
@@ -5788,29 +5809,18 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     background-position-x: 8%;
     background-repeat: repeat-y; }
     .concept-detail.concept1 h2 {
-      color: #ca211a;
-      text-transform: capitalize;
-      margin: 1em 0; }
+      color: #ca211a; }
     .concept-detail.concept1 .description p {
-      color: #b4b4b4;
-      font-size: medium;
-      margin-bottom: 3em; }
-    .concept-detail.concept1 .images .head {
-      height: 200px;
-      padding-top: 60px;
-      padding-left: 78px; }
-      .concept-detail.concept1 .images .head h2 {
-        margin: 0;
-        color: #fabf27; }
-    .concept-detail.concept1 .images .image {
-      height: 200px;
-      -webkit-transition: all 0.4s ease-in;
-      transition: all 0.4s ease-in; }
-      .concept-detail.concept1 .images .image img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover; }
+      color: #b4b4b4; }
+    .concept-detail.concept1 .images .head h2 {
+      color: #fabf27; }
+  .concept-detail.concept2 {
+    background-image: url(/img/flowerpattern.png);
+    background-size: 6%;
+    height: 90vh;
+    background-position-x: 7%;
+    background-color: #55c3b6;
+    background-repeat: repeat-y; }
 
 .arrow {
   background-image: url("/img/down-arrow.svg");

@@ -34,6 +34,12 @@ class ImagesTableSeeder extends Seeder
             'imageable_id' => 6,
             'imageable_type' => 'App\User'
         ]);
+        Image::create([
+            'image' => 'cokeweed.jpg',
+            'imageable_id' => 7,
+            'imageable_type' => 'App\User'
+        ]);
+
 
         // Party's images
 
@@ -58,7 +64,7 @@ class ImagesTableSeeder extends Seeder
             'imageable_type' => 'App\Party'
         ]);
         Image::create([
-            'image' => 'brazil.jpg',
+            'image' => 'flower.jpg',
             'imageable_id' => 2,
             'imageable_type' => 'App\Party'
         ]);
