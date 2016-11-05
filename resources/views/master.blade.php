@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PartyPack</title>
+    <title>HelloParty</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery.fancybox.css')}}" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     @yield('styles')
 </head>
 <body>
@@ -19,5 +22,6 @@
     @yield('content')
 </div>
 <script src="{{asset('js/app.js')}}"></script>
+
 </body>
 </html>

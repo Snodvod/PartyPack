@@ -37,20 +37,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-offset-2 col-lg-3 picture"></div>
+                    <div style="background-image: url({{asset('img/' . $artist->images()->first()->image)}});" class="col-lg-offset-2 col-lg-3 picture"></div>
                     <div class="col-lg-offset-2 col-lg-3 text">
-                        <h3>Luan Oliveira</h3>
-                        <div class="info">
-                            <p>25 years old</p>
-                            <p>Born in Rio De Janeiro, Brasil</p>
-                            <p>Great at singing Brazilian music</p>
-                        </div>
-                        <p class="bio">Here comes a big ass biography of this artist, yes yes yes yes yesyes yes yes yes
-                            yesyes yes yes yes yesyes yes yes yes yesyes yes yes yes yesyes yes yes yes yesyes yes yes
-                            yes
-                            yesyes yes yes yes yesyes yes yes yes yesyes yes yes yes yesyes yes yes yes yes
-                            yes yes yes yes yesyes yes yes yes yesyes yes yes yes yesyes yes yes yes yesyes yes yes yes
-                            yes</p>
+                        <h2>{{$artist->name}}</h2>
+                        <p class="bio">{{$artist->bio}}</p>
                         <a href="/artists">See all artists ></a>
                     </div>
                 </div>
@@ -61,7 +51,7 @@
             <div class="col-lg-8 col-lg-offset-2 concepts">
                 <div class="row">
                     @foreach($populars as $popular)
-                    <a href="#">
+                    <a href="/concepts/{{$popular->id}}">
                         <div class="col-lg-4">
                             <div style="background-image: url({{'/img/' . $popular->images()->first()->image}});" class="concept">
                                 <div class="overlay">

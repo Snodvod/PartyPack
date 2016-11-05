@@ -5,7 +5,7 @@
  */
 
 require('./bootstrap');
-
+require('./jquery.fancybox');
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
@@ -21,12 +21,17 @@ const app = new Vue({
 
 $(window).on('load', function () {
     console.log('doc ready');
+
+    $(".se-pre-con").fadeOut("slow");
+
     $("#js-click-welcome").click(function () {
         $('html,body').animate({
-           scrollTop: $('.purpose').offset().top -77},
+                scrollTop: $('.purpose').offset().top -77},
             'slow');
     });
-    $(".se-pre-con").fadeOut("slow");
+
+    $('a.group').fancybox();
+
 })
 
 

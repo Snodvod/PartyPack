@@ -22,18 +22,19 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->text('bio')->nullable();
             $table->timestamps();
         });
 
-        Schema::create('tblUserEvent', function (Blueprint $table) {
+        Schema::create('tblUserParty', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index()->default(0);
-            $table->integer('event_id')->unsigned()->index()->default(0);
+            $table->integer('party_id')->unsigned()->index()->default(0);
         });
 
-        Schema::table('tblUserEvent', function (Blueprint $table) {
+        Schema::table('tblUserParty', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
-            $table->foreign('event_id')->references('id')->on('tblEvent')->onDelete('cascade');
+            $table->foreign('party_id')->references('id')->on('tblParty')->onDelete('cascade');
         });
 
         Schema::create('tblUserOccupation', function (Blueprint $table) {

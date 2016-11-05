@@ -12,12 +12,17 @@ class Party extends Model
     	'name', 'description'
     ];
 
-    public function event() {
-    	return $this->belongsToMany('App\Event', 'party_id');
+    public function users() {
+    	return $this->belongsToMany('App\User', 'tblUserParty', 'party_id', 'user_id');
     }
 
     public function images()
     {
         return $this->morphMany('App\Image', 'imageable');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
     }
 }

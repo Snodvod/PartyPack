@@ -18,18 +18,23 @@ class OccupationsTableSeeder extends Seeder
         Occupation::truncate();
 
         Occupation::create([
-        	'type' => $faker->name(),
+        	'type' => 'Musician',
         	'description' => $faker->text()
         ]);
 
         Occupation::create([
-        	'type' => $faker->name(),
+        	'type' => 'Cook',
         	'description' => $faker->text()
         ]);
 
         Occupation::create([
-        	'type' => $faker->name(),
+        	'type' => 'Dancer',
         	'description' => $faker->text()
+        ]);
+
+        Occupation::create([
+            'type' => 'Magician',
+            'description' => $faker->text()
         ]);
     }
 }

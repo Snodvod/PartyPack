@@ -10,7 +10,7 @@ class User extends Authenticatable
     protected $table = 'tblUser';
 
     protected $fillable = [
-        'name', 'email', 'password', 'type_id'
+        'name', 'email', 'password', 'type_id', 'bio'
     ];
 
     /**
@@ -22,9 +22,9 @@ class User extends Authenticatable
         'password'
     ];
 
-    public function events()
+    public function parties()
     {
-        return $this->belongsToMany('App\Event', 'tblUserEvent', 'user_id', 'event_id');
+        return $this->belongsToMany('App\Event', 'tblUserParty', 'user_id', 'party_id');
     }
 
     public function occupations()

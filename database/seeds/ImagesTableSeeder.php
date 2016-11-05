@@ -43,6 +43,21 @@ class ImagesTableSeeder extends Seeder
             'imageable_type' => 'App\Party'
         ]);
         Image::create([
+            'image' => 'bbq.jpg',
+            'imageable_id' => 1,
+            'imageable_type' => 'App\Party'
+        ]);
+        Image::create([
+            'image' => 'jamaicanfood.jpg',
+            'imageable_id' => 1,
+            'imageable_type' => 'App\Party'
+        ]);
+        Image::create([
+            'image' => 'sfeer.jpg',
+            'imageable_id' => 1,
+            'imageable_type' => 'App\Party'
+        ]);
+        Image::create([
             'image' => 'brazil.jpg',
             'imageable_id' => 2,
             'imageable_type' => 'App\Party'

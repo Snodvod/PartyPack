@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+html, body {
+  height: 100%;
+}
+
 p, h1, h2, h3, h4, h5, h6, span, body {
   font-family: 'Lato', sans-serif;
 }
@@ -20,17 +24,34 @@ p, h1, h2, h3, h4, h5, h6, span, body {
 }
 
 .concept-detail {
-  height: 89vh;
+  height: 100%;
   &.concept1 {
     background: black;
-    .row {
-      background-image: url(/img/rasta_stripes.jpg);
-      background-size: 9%;
-      height: 89vh;
-      background-position-x: 8%;
-      background-repeat: repeat-y;
-      h2 {
-       color: #ca211a;
+    background-image: url(/img/rasta_stripes.jpg);
+    background-size: 9%;
+    height: 90vh;
+    background-position-x: 8%;
+    background-repeat: repeat-y;
+    h2 {
+      color: #ca211a;
+      margin: 1em 0;
+    }
+    .description {
+      p {
+        color: white;
+        font-size: medium;
+        margin-bottom: 3em;
+      }
+    }
+    .images {
+      .image {
+        height: 200px;
+        transition: all 0.4s ease-in;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -118,7 +139,7 @@ p, h1, h2, h3, h4, h5, h6, span, body {
   height: 600px;
   background-color: #0d4203;
   .all {
-    margin-top: 2em;
+    margin-top: 4em;
     a {
       right: 9px;
       position: absolute;
@@ -153,15 +174,6 @@ p, h1, h2, h3, h4, h5, h6, span, body {
           line-height: 300px;
         }
       }
-      &.c1 {
-        background-image: url('/img/brazil.jpg');
-      }
-      &.c2 {
-        background-image: url('/img/jamaica.jpg');
-      }
-      &.c3 {
-        background-image: url('/img/magician.jpg');
-      }
     }
   }
 }
@@ -172,23 +184,29 @@ p, h1, h2, h3, h4, h5, h6, span, body {
 
   h2, h3 {
     color: $dark-blue;
+    margin: 1em 0 0;
   }
   .head {
     margin-top: 2em;
     margin-bottom: 2em;
   }
   .picture {
-    background-image: url('/img/luan.png');
-    height: 478px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 481px;
     background-size: cover;
   }
   .text {
     color: white;
-    margin-top: 4%;
+    h2 {
+      color: #00000F;
+      margin-bottom: 1em;
+    }
     a {
       right: 25px;
       position: absolute;
       color: black;
+      margin-top: 2em;
     }
   }
 }
@@ -379,17 +397,22 @@ p, h1, h2, h3, h4, h5, h6, span, body {
   }
 
   @-webkit-keyframes sk-bounce {
-    0%, 100% { -webkit-transform: scale(0.0) }
-    50% { -webkit-transform: scale(1.0) }
+    0%, 100% {
+      -webkit-transform: scale(0.0)
+    }
+    50% {
+      -webkit-transform: scale(1.0)
+    }
   }
 
   @keyframes sk-bounce {
     0%, 100% {
       transform: scale(0.0);
       -webkit-transform: scale(0.0);
-    } 50% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-      }
+    }
+    50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
   }
 }
