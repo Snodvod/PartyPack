@@ -28,12 +28,13 @@ p, h1, h2, h3, h4, h5, h6, span, body {
   &.concept1 {
     background: black;
     background-image: url(/img/rasta_stripes.jpg);
-    background-size: 9%;
+    background-size: 5%;
     height: 90vh;
     background-position-x: 8%;
     background-repeat: repeat-y;
     h2 {
       color: #ca211a;
+      text-transform: capitalize;
       margin: 1em 0;
     }
     .description {
@@ -46,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     .images {
       .head {
         height: 200px;
-        padding-top: 80px;
+        padding-top: 60px;
         padding-left: 78px;
         h2 {
           margin: 0;

@@ -19,17 +19,20 @@ class CommentsTableSeeder extends Seeder
 
         Comment::create([
         	'description' => $faker->text(),
-        	'rating' => $faker->randomDigitNotNull()
+        	'rating' => $faker->randomDigitNotNull(),
+            'party_id' => 1
         ]);
 
         Comment::create([
         	'description' => $faker->text(),
-        	'rating' => $faker->randomDigitNotNull()
+        	'rating' => $faker->randomDigitNotNull(),
+            'party_id' => 2
         ]);
 
         Comment::create([
         	'description' => $faker->text(),
-        	'rating' => $faker->randomDigitNotNull()
+        	'rating' => $faker->randomDigitNotNull(),
+            'party_id' => 2
         ]);
     }
 }

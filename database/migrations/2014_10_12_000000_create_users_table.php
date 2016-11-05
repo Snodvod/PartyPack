@@ -25,28 +25,6 @@ class CreateUsersTable extends Migration
             $table->text('bio')->nullable();
             $table->timestamps();
         });
-
-        Schema::create('tblUserParty', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->index()->default(0);
-            $table->integer('party_id')->unsigned()->index()->default(0);
-        });
-
-        Schema::table('tblUserParty', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
-            $table->foreign('party_id')->references('id')->on('tblParty')->onDelete('cascade');
-        });
-
-        Schema::create('tblUserOccupation', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->index()->default(0);
-            $table->integer('occupation_id')->unsigned()->index()->default(0);
-        });
-
-        Schema::table('tblUserOccupation', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
-            $table->foreign('occupation_id')->references('id')->on('tblOccupation')->onDelete('cascade');
-        });
     }
 
     /**
@@ -56,7 +34,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tblUserOccupation');
         Schema::drop('tblUser');
     }
 }

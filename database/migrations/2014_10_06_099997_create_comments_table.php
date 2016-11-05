@@ -17,6 +17,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->string('description');
             $table->integer('rating');
+            $table->integer('party_id');
             $table->timestamps();
         });
     }

@@ -12,13 +12,6 @@ require('./jquery.fancybox');
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
-
-
 $(window).on('load', function () {
     console.log('doc ready');
 

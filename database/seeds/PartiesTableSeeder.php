@@ -23,7 +23,7 @@ class PartiesTableSeeder extends Seeder
         ]);
 
         Party::create([
-        	'name' => 'South American Fiesta',
+        	'name' => 'Flower Power Party',
         	'description' => $faker->text()
         ]);
 

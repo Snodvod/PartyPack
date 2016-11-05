@@ -12,7 +12,7 @@ class Comment extends Model
     	'description', 'rating'
     ];
 
-    public function event() {
-    	return $this->belongsTo('App\Event');
+    public function party() {
+    	return $this->belongsTo('App\Party');
     }
 }
