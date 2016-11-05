@@ -14,7 +14,11 @@
                 </div>
             </div>
             <div class="images row">
-                <h2>Some cool images</h2>
+                <div class="col-lg-4">
+                    <div class="head">
+                        <h2>Some images</h2>
+                    </div>
+                </div>
                 @foreach($party->images()->get() as $image)
                     <div class="image col-lg-4">
                         <a class="group" rel="group1" href="{{asset('img/' . $image->image)}}"><img

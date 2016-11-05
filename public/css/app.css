@@ -5791,9 +5791,16 @@ p, h1, h2, h3, h4, h5, h6, span, body {
       color: #ca211a;
       margin: 1em 0; }
     .concept-detail.concept1 .description p {
-      color: white;
+      color: #b4b4b4;
       font-size: medium;
       margin-bottom: 3em; }
+    .concept-detail.concept1 .images .head {
+      height: 200px;
+      padding-top: 80px;
+      padding-left: 78px; }
+      .concept-detail.concept1 .images .head h2 {
+        margin: 0;
+        color: #fabf27; }
     .concept-detail.concept1 .images .image {
       height: 200px;
       -webkit-transition: all 0.4s ease-in;
