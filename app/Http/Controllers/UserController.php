@@ -25,13 +25,7 @@ class UserController extends Controller
         //GET USER IN DB BY ID
         $user = User::find($id);
 
-        if (!$user) {
-            //JSON RESPONSE IF USER DOESN'T EXIST
-            return response()->json(['message' => "This User doesn't exist.", 'code' => 404], 404);
-        }
-
-        //JSON RESPONSE WITH ALL USER(S)
-        return response()->json(['data' => $user], 200);
+        return view('artists.detail', ['artist' => $user]);
     }
 
     public function getOccupations($id)

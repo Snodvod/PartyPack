@@ -6,7 +6,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="item {{isActiveRoute('home')}}"><a href="/"><span>Home</span></a></li>
                     <li class="diamond"></li>
-                    <li class="item {{areActiveRoutes(['artists.index'])}}"><a href="/artists"><span>Artists</span></a>
+                    <li class="item {{areActiveRoutes(['artists.index', 'artists.show'])}}"><a href="/artists"><span>Artists</span></a>
                     </li>
                     <li class="diamond"></li>
                     <li class="item {{areActiveRoutes(['concepts.index', 'concepts.show'])}}"><a href="/concepts"><span>Concepts</span></a>
@@ -18,7 +18,12 @@
                         <li class="item {{isActiveRoute('register')}}"><a href="/register"><span>Register</span></a>
                         </li>
                     @else
-                        <li class="item"><a href="{{ url('/logout') }}"><span>Logout</span></a></li>
+                        <form method="POST" action="/logout" class="navbar-nav navbar-form navbar-right">
+                            <div class="form-group">
+                                {!! csrf_field() !!}
+                            </div>
+                            <input class="logout" type="submit" value="Logout">
+                        </form>
                     @endif
                 </ul>
             </div>
