@@ -23,6 +23,14 @@ class PartyController extends Controller
         return view('concepts.detail', ['party' => $party]);
     }
 
+    public function showComments($id)
+    {
+        $party = Party::find($id);
+        $comments = $party->comments;
+
+        return view('concepts.detail', ['party' => $party, 'comments' => $comments]);
+    }
+
     public function store(Request $request)
     {
         Party::create([
