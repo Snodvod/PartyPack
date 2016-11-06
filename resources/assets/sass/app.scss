@@ -82,10 +82,7 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     background-repeat: repeat-y;
   }
   &.concept3 {
-    background-image: url(/img/stars.jpg);
-    background-size: cover;
-    background-position-x: 7%;
-    background-color: #0e0e0c;
+    background-color: #060606;
   }
 }
 
@@ -229,16 +226,15 @@ p, h1, h2, h3, h4, h5, h6, span, body {
 
   h2, h3 {
     color: $dark-blue;
-    margin: 1em 0 0;
   }
   .head {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 3em;
+    margin-bottom: 1em;
   }
   .picture {
     background-repeat: no-repeat;
     background-position: 50%;
-    height: 481px;
+    height: 478px;
     background-size: cover;
   }
   .text {

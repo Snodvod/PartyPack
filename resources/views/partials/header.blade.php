@@ -24,6 +24,10 @@
                             </div>
                             <input class="logout" type="submit" value="Logout">
                         </form>
+                        @if(Auth::user()->type['name'] == 'admin')
+                            <li class="item {{isActiveRoute('admin')}}"><a href="/admin"><span>Admin</span></a>
+                            <li class="diamond"></li>
+                        @endif
                     @endif
                 </ul>
             </div>

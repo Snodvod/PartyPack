@@ -19,13 +19,6 @@ class PartyController extends Controller
     public function show($id)
     {
         $party = Party::find($id);
-
-        return view('concepts.detail', ['party' => $party]);
-    }
-
-    public function showComments($id)
-    {
-        $party = Party::find($id);
         $comments = $party->comments;
 
         return view('concepts.detail', ['party' => $party, 'comments' => $comments]);
