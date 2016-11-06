@@ -18,7 +18,7 @@
                         <li class="item {{isActiveRoute('register')}}"><a href="/register"><span>Register</span></a>
                         </li>
                     @else
-                        <li class="item"><a href="/logout"><span>Logout</span></a></li>
+                        <li class="item"><a href="{{ url('/logout') }}"><span>Logout</span></a></li>
                     @endif
                 </ul>
             </div>
