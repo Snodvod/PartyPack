@@ -9,10 +9,10 @@ class Mail extends Model
     protected $table = "tblMail";
 
     protected $fillable = [
-        "secret"
+        'secret', 'user_id'
     ];
 
     public function user() {
-        return $this->belongsTo('App\User');
+        return $this->hasMany('App\User');
     }
 }

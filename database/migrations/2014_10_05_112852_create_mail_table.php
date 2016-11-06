@@ -15,6 +15,8 @@ class CreateMailTable extends Migration
     {
         Schema::create('tblMail', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index()->default('0');
+            $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
             $table->string('secret');
             $table->integer('user_id')->unsigned()->index()->default('0');
             $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
