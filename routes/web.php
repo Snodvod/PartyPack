@@ -4,6 +4,7 @@ Auth::routes();
 
 // View routes
 Route::resource('artists', 'UserController');
+Route::get('artists/{id}/comments', 'UserController@showComments');
 Route::resource('concepts', 'PartyController');
 Route::resource('comments', 'CommentController');
 Route::get('email', 'MailController@sendInvitation');
