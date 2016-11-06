@@ -18,8 +18,6 @@ class CreateMailTable extends Migration
             $table->integer('user_id')->unsigned()->index()->default('0');
             $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
             $table->string('secret');
-            $table->integer('user_id')->unsigned()->index()->default('0');
-            $table->foreign('user_id')->references('id')->on('tblUser')->onDelete('cascade');
             $table->timestamps();
         });
     }
