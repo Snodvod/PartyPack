@@ -6,7 +6,6 @@ use App\Comment;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Event;
 
 class EventController extends Controller
 {

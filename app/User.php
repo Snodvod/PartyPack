@@ -24,7 +24,7 @@ class User extends Authenticatable
 
     public function parties()
     {
-        return $this->belongsToMany('App\Event', 'tblUserParty', 'user_id', 'party_id');
+        return $this->belongsToMany('App\Party', 'tblUserParty', 'user_id', 'party_id');
     }
 
     public function occupations()

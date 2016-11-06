@@ -30,7 +30,6 @@ class DatabaseSeeder extends Seeder
     private function clear_tables() {
         \App\User::truncate();
         \App\Comment::truncate();
-        \App\Event::truncate();
         \App\Occupation::truncate();
         \App\Party::truncate();
         \App\UserEvent::truncate();

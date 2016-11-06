@@ -3,8 +3,6 @@
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use App\User;
-use App\Occupation;
-use App\Event;
 
 class UsersTableSeeder extends Seeder
 {
