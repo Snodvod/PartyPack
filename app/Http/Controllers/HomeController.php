@@ -17,10 +17,10 @@ class HomeController extends Controller
     {
         $artist = User::whereHas('type', function($query) {
             $query->where('name', 'artist');
-        })->get()->take(1);
+        })->get()->take(1)->first();
 
         $populars = Party::All()->take(3);
 
-        return view('index', ['artist' => $artist[0], 'populars' => $populars]);
+        return view('index', ['artist' => $artist, 'populars' => $populars]);
     }
 }
