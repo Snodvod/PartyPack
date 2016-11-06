@@ -28,6 +28,14 @@ class UserController extends Controller
         return view('artists.detail', ['artist' => $user]);
     }
 
+    public function showComments($id)
+    {
+        $user = User::find($id);
+        $comments = $user->comments;
+
+        return view('artists.detail', ['artist' => $user, 'comments' => $comments]);
+    }
+
     public function getOccupations($id)
     {
         $user = User::find($id);
