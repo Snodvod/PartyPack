@@ -15,9 +15,9 @@ class CreateUsersTable extends Migration
     {
         Schema::create('tblUser', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('type_id')->unsigned()->index()->default(0);
+            $table->integer('type_id')->unsigned()->index()->default('0');
             $table->foreign('type_id')->references('id')->on('tblType')->onDelete('cascade');
-            $table->integer('mail_id')->unsigned()->index()->default(0);
+            $table->integer('mail_id')->unsigned()->index()->default('0');
             $table->foreign('mail_id')->references('id')->on('tblMail')->onDelete('cascade');
             $table->string('name');
             $table->string('email')->unique();
