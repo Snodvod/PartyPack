@@ -23,6 +23,6 @@ class Party extends Model
 
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->morphMany('App\Comment', 'commentable');
     }
 }

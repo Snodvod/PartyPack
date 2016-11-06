@@ -12,7 +12,7 @@ class Comment extends Model
     	'description', 'rating'
     ];
 
-    public function party() {
-    	return $this->belongsTo('App\Party');
+    public function commentable() {
+    	return $this->morphTo();
     }
 }
