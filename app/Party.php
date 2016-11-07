@@ -28,6 +28,6 @@ class Party extends Model
 
     public function bookings()
     {
-        return $this->belongsToMany('App\User', 'bookings');
+        return $this->hasMany('App\Booking');
     }
 }

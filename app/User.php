@@ -54,7 +54,7 @@ class User extends Authenticatable
 
     public function bookings()
     {
-        return $this->belongsToMany('App\Party', 'bookings');
+        return $this->hasMany('App\Booking');
     }
 
     public function isAdmin()
