@@ -25,4 +25,9 @@ class Party extends Model
     {
         return $this->morphMany('App\Comment', 'commentable');
     }
+
+    public function bookings()
+    {
+        return $this->hasMany('App\Booking');
+    }
 }

@@ -52,6 +52,11 @@ class User extends Authenticatable
         return $this->morphMany('App\Comment', 'commentable');
     }
 
+    public function bookings()
+    {
+        return $this->hasMany('App\Booking');
+    }
+
     public function isAdmin()
     {
         if ($this->type['name'] == 'admin') {
