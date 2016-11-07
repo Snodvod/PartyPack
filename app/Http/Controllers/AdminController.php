@@ -15,6 +15,6 @@ class AdminController extends Controller
     	$users = User::all();
     	$parties = Party::all();
 
-        return view('admin.index', ['users' => $users]);
+        return view('admin.index', ['users' => $users, 'parties' => $parties]);
     }
 }
