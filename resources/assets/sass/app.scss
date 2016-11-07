@@ -24,7 +24,7 @@ p, h1, h2, h3, h4, h5, h6, span, body {
 }
 
 .concept-detail {
-  height: 90vh;
+  height: 700px;
   h2 {
     text-transform: capitalize;
     margin: 1em 0;
@@ -34,6 +34,18 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     margin-bottom: 3em;
   }
   .images {
+    &.artists {
+      margin-bottom: 2em;
+      .artist-name {
+        position: absolute;
+        bottom: 21%;
+        color: white;
+        padding: 50px;
+        /* width: 100%; */
+        background-color: rgba(0,0,0,.5);
+        left: 26%;
+      }
+    }
     .head {
       height: 200px;
       padding-top: 60px;
