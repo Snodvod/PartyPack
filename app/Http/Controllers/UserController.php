@@ -23,6 +23,11 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
+        $user->isActive = !$user->isActive;
+
+        $user->save();
+
+        return redirect('/admin');
     }
 
     //GET USER BY ID
@@ -85,11 +90,9 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::find($id);
-
+        $userName = $user->name;
         $user->delete();
         
-        $users = User::all();
-
-        return view('admin.index', ['users' => $users]);
+        return redirect('/admin')->with('status', "$userName successfully deleted!");
     }
 }
