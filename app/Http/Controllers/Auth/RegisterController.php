@@ -63,29 +63,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $file = $data->file('image');
-        $fileName = sha1(Carbon::now()).'.'.$file->clientExtension();
-        $originalName = $file->getClientOriginalName();
-        $user = User::create([
+        return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'type_id' => 3
         ]);
-
-        $user->save();
-        $userId = $user->id;
-
-        $image = Image::create([
-            'image' => $originalName,
-            'imageable_id' => $userId,
-            'imageable_type' => 'App\User'
-        ]);
-
-        $image->save();
-
-        $file->storeAs('/', $fileName, 'public');
-
-        return $user;
     }
 }

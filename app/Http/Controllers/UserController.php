@@ -19,6 +19,12 @@ class UserController extends Controller
          return view('artists.index', ['artists' => $artists]);
     }
 
+    public function activateAccount($id)
+    {
+        $user = User::find($id);
+
+    }
+
     //GET USER BY ID
     public function show($id)
     {
@@ -74,5 +80,16 @@ class UserController extends Controller
         $events = $user->events()->get();
 
         return response()->json(['data' => $events], 200);
+    }
+
+    public function destroy($id)
+    {
+        $user = User::find($id);
+
+        $user->delete();
+        
+        $users = User::all();
+
+        return view('admin.index', ['users' => $users]);
     }
 }
