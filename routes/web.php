@@ -8,7 +8,7 @@ Route::get('user/{id}/activate', 'UserController@activateAccount');
 Route::get('artists/{id}/comments', 'UserController@showComments');
 Route::resource('concepts', 'PartyController');
 Route::resource('comments', 'CommentController');
-Route::get('email/{user}', 'MailController@sendInvitation');
+Route::post('email/{user}', 'MailController@sendInvitation');
 Route::resource('booking', 'BookingController');
 
 Route::get('/', 'HomeController@index')->name('home');

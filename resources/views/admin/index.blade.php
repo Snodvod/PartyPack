@@ -37,12 +37,14 @@
                                         <button type="submit" class="btn btn-primary">Delete</button>
                                     </form>
                                 </td>
+                                @if(!$user->isActive)
                                 <td>
                                 	<form action="{{ url('/email/'.$user->id) }}" method="POST">
                                     {!! csrf_field() !!}
                                         <button type="submit" class="btn btn-primary">Invite</button>
                                     </form>
                                 </td>
+                                @endif
                             </tr>
                             @endforeach
                         </tbody>  
