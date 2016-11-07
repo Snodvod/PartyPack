@@ -16,7 +16,7 @@ class MailController extends Controller
         $userId = $id;
     	$data = ['email' => $emailUser, 'name' => $nameUser, 'id' => $userId];
 
-    	Mail::send('email.invitation', $data, function($message) use ($data) 
+    	Mail::send(['html' => 'email.invitation'], $data, function($message) use ($data) 
     	{
     		$emailUser = $data['email'];
             $nameUser = $data['name'];
