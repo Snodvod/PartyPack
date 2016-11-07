@@ -13,7 +13,7 @@
                     @foreach($artists as $artist)
                         <div class="col-lg-4">
                             <div class="hovereffect">
-                               <img class="img-responsive" src="{{asset('img/' .$artist->images()->first()->image)}}" alt="{{$artist->name}}">
+                               <img class="img-responsive" src="{{asset('storage/' .$artist->images()->first()->image)}}" alt="{{$artist->name}}">
                                 <div class="overlay">
                                     <h2>{{$artist->name}}</h2>
                                     <a class="info" href="/artists/{{$artist->id}}">Read more</a>

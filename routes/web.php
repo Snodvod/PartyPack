@@ -14,7 +14,7 @@ Route::resource('booking', 'BookingController');
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'admin'], function () {
-    Route::get('/admin', 'AdminController@index');
+    Route::get('/admin', 'AdminController@index')->name('admin.index');
 });
 
 

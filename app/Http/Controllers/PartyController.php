@@ -23,14 +23,17 @@ class PartyController extends Controller
         $party = Party::find($id);
         $comments = $party->comments;
 
-        return view('concepts.detail', ['party' => $party, 'comments' => $comments]);
+        $artists = $party->users()->whereHas('type', function($query) {
+            $query->where('name', 'artist');
+        })->get();
+
+        return view('concepts.detail', ['party' => $party, 'comments' => $comments, 'artists' => $artists]);
     }
 
     public function store(Request $request)
     {
         $file = $request->file('image');
         $fileName = sha1(Carbon::now()).'.'.$file->clientExtension();
-        $originalName = $file->getClientOriginalName();
         
         $party = Party::create([
             'name' => $request->name,
@@ -42,7 +45,7 @@ class PartyController extends Controller
         var_dump($partyId);
 
         $image = Image::create([
-            'image' => $originalName,
+            'image' => $fileName,
             'imageable_id' => $partyId,
             'imageable_type' => 'App\Party'
         ]);

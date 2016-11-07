@@ -13,6 +13,14 @@
                     <p>{{$party->description}}</p>
                 </div>
             </div>
+            <div class="row artists">
+                <div class="col-lg-12 text-center"><h2>Contributing artists</h2></div>
+                @foreach($artists as $artist)
+                    <div class="col-lg-4">
+                        {{$artist->name}}
+                    </div>
+                @endforeach
+            </div>
             <div class="images row">
                 <div class="col-lg-4">
                     <div class="head">
@@ -21,11 +29,10 @@
                 </div>
                 @foreach($party->images()->get() as $image)
                     <div class="image col-lg-4">
-                        <a class="group" rel="group1" href="{{asset('img/' . $image->image)}}"><img
-                                    src="{{asset('img/' . $image->image)}}" alt="{{$party->name}}"/></a>
+                        <a class="group" rel="group1" href="{{asset('storage/' . $image->image)}}"><img
+                                    src="{{asset('storage/' . $image->image)}}" alt="{{$party->name}}"/></a>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </div>

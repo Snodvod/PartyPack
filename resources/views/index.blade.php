@@ -32,16 +32,11 @@
         <div class="row artist">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-lg-4 col-lg-offset-4 text-center head">
-                        <h2>Meet one of our artists</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div style="background-image: url({{asset('img/' . $artist->images()->first()->image)}});" class="col-lg-offset-2 col-lg-3 picture"></div>
+                    <div style="background-image: url({{asset('storage/' . $artist->images()->first()->image)}});" class="col-lg-offset-2 col-lg-3 picture"></div>
                     <div class="col-lg-offset-2 col-lg-3 text">
-                        <h2>{{$artist->name}}</h2>
+                        <h2><a href="/artists/{{$artist->id}}">{{$artist->name}}</a></h2>
                         <p class="bio">{{$artist->bio}}</p>
-                        <a href="/artists">See all artists ></a>
+                        <a class="all" href="/artists">See all artists ></a>
                     </div>
                 </div>
             </div>
@@ -53,7 +48,7 @@
                     @foreach($populars as $popular)
                     <a href="/concepts/{{$popular->id}}">
                         <div class="col-lg-4">
-                            <div style="background-image: url({{'/img/' . $popular->images()->first()->image}});" class="concept">
+                            <div style="background-image: url({{'/storage/' . $popular->images()->first()->image}});" class="concept">
                                 <div class="overlay">
                                     <div class="text">{{$popular->name}}</div>
                                 </div>
