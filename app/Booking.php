@@ -8,13 +8,13 @@ class Booking extends Model
 {
     protected $fillable = ['user_id', 'party_id'];
 
-    public function parties()
+    public function party()
     {
-        return $this->belongsToMany('App\Party');
+        return $this->belongsTo('App\Party');
     }
 
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsTo('App\User');
     }
 }
