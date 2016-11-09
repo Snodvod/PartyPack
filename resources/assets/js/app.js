@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 require('./jquery.fancybox');
+require('./bootstrap-select.min');
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
@@ -22,8 +23,11 @@ $(window).on('load', function () {
                 scrollTop: $('.purpose').offset().top -77},
             'slow');
     });
-
     $('a.group').fancybox();
+
+    $('.selectpicker').selectpicker({
+        style: 'btn-info',
+    });
 
 })
 

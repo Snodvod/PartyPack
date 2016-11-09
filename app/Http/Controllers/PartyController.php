@@ -23,7 +23,7 @@ class PartyController extends Controller
         $party = Party::find($id);
         $comments = $party->comments;
 
-        $artists = $party->users()->whereHas('type', function($query) {
+        $artists = $party->users()->whereHas('type', function ($query) {
             $query->where('name', 'artist');
         })->get();
 
@@ -33,27 +33,29 @@ class PartyController extends Controller
     public function store(Request $request)
     {
         $file = $request->file('image');
-        $fileName = sha1(Carbon::now()).'.'.$file->clientExtension();
-        
+        $artistId = $request->artist;
+
         $party = Party::create([
             'name' => $request->name,
             'description' => $request->description
         ]);
-
+        $party->users()->attach($artistId);
         $party->save();
-        $partyId = $party->id;
-        var_dump($partyId);
 
-        $image = Image::create([
-            'image' => $fileName,
-            'imageable_id' => $partyId,
-            'imageable_type' => 'App\Party'
-        ]);
+        if ($file) {
+            $partyId = $party->id;
+            $fileName = sha1(Carbon::now()) . '.' . $file->clientExtension();
+            $image = Image::create([
+                'image' => $fileName,
+                'imageable_id' => $partyId,
+                'imageable_type' => 'App\Party'
+            ]);
+            $image->save();
+            $file->storeAs('/', $fileName, 'public');
+        }
 
-        $image->save();
 
-        $file->storeAs('/', $fileName, 'public');
 
-        return 'success';
+        return redirect()->to('/concepts');
     }
 }

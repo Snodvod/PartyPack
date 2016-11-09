@@ -12,7 +12,10 @@ use App\Party;
 class AdminController extends Controller
 {
     public function index() {
-    	$users = User::all();
+        $users = User::whereHas('type', function($query) {
+            $query->where('name', 'artist');
+        })->get();
+        
     	$parties = Party::all();
 
         return view('admin.index', ['users' => $users, 'parties' => $parties]);
