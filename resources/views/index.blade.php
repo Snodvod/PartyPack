@@ -32,7 +32,7 @@
         <div class="row artist">
             <div class="col-lg-12">
                 <div class="row">
-                    <div style="background-image: url({{asset('storage/' . $artist->images()->first()->image)}});" class="col-lg-offset-2 col-lg-3 picture"></div>
+                    <div style="background-image: url('/img/dynamo.jpg');" class="col-lg-offset-2 col-lg-3 picture"></div>
                     <div class="col-lg-offset-2 col-lg-3 text">
                         <h2><a href="/artists/{{$artist->id}}">{{$artist->name}}</a></h2>
                         <p class="bio">{{$artist->bio}}</p>
