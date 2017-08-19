@@ -37,7 +37,8 @@ class PartyController extends Controller
 
         $party = Party::create([
             'name' => $request->name,
-            'description' => $request->description
+            'description' => $request->description,
+            'image_url' => sha1(Carbon::now()) . '.' . $file->clientExtension()
         ]);
         $party->users()->attach($artistId);
         $party->save();
@@ -51,7 +52,7 @@ class PartyController extends Controller
                 'imageable_type' => 'App\Party'
             ]);
             $image->save();
-            $file->storeAs('/', $fileName, 'public');
+            $file->store('img/', $fileName, 'upload');
         }
 
 

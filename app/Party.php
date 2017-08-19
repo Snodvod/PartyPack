@@ -9,7 +9,7 @@ class Party extends Model
 	protected $table = 'tblParty';
 
     protected $fillable = [
-    	'name', 'description'
+    	'name', 'description', 'image_url'
     ];
 
     public function users() {

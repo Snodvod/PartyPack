@@ -15,8 +15,7 @@ class AdminController extends Controller
         $users = User::whereHas('type', function($query) {
             $query->where('name', 'artist');
         })->get();
-        
-    	$parties = Party::all();
+        $parties = Party::all();
 
         return view('admin.index', ['users' => $users, 'parties' => $parties]);
     }

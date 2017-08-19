@@ -92,6 +92,8 @@ class UserController extends Controller
         $user = User::find($id);
         $userName = $user->name;
         $user->delete();
+        $user->parties()->detach();
+        $user->occupations()->detach();
         
         return redirect('/admin')->with('status', "$userName successfully deleted!");
     }

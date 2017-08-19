@@ -64,7 +64,11 @@
                             <tr>
                                 <td>{{$party->name}}</td>
                                 <td>{{$party->description}}</td>
-                                <td>{{$party->users[0]->name}}</td>
+                                @if ($party->users->count())
+                                    <td>{{$party->users->first()->name}}</td>
+                                @else
+                                    <td>No artists active yet</td>
+                                @endif
                             </tr>
                         @endforeach
                         </tbody>
