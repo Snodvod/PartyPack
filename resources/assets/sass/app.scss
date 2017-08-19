@@ -32,6 +32,9 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     text-transform: capitalize;
     margin: 1em 0;
   }
+  .concept-detail-title {
+    color: white;
+  }
   p {
     font-size: medium;
     margin-bottom: 3em;
@@ -73,8 +76,11 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     background-size: 5%;
     background-position-x: 8%;
     background-repeat: repeat-y;
-    h2 {
+    h1 {
       color: #ca211a;
+    }
+    h2 {
+      color: white;
     }
     .description {
       p {
@@ -97,7 +103,14 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     background-repeat: repeat-y;
   }
   &.concept3 {
+    background-image: url(/img/pokerpattern.png);
+    background-size: 6%;
+    background-position-x: 7%;
+    background-repeat: repeat-y;
     background-color: #060606;
+  h1 {
+    color: #ca211a;
+  }
   }
 }
 
@@ -254,7 +267,8 @@ p, h1, h2, h3, h4, h5, h6, span, body {
     color: white;
     margin-top: 100px;
     a {
-      color: black;
+      color: white;
+      text-decoration: underline;
     }
     h2 {
       color: #00000F;
@@ -264,8 +278,34 @@ p, h1, h2, h3, h4, h5, h6, span, body {
       right: 25px;
       position: absolute;
       margin-top: 2em;
+      font-size: 14px;
+    }
+    a.all:hover{
+      text-decoration-color: black;
     }
   }
+}
+
+.all {
+  font-size: 14px;
+  color: white;
+  text-decoration: underline;
+}
+
+.concepts-showcase {
+  border: 2px solid #dff0d8;
+}
+
+.concept-detail-title {
+  color: white;
+}
+
+.all:hover{
+  text-decoration-color: black;
+}
+
+.homepage-p {
+  font-size: 16px;
 }
 
 body {

@@ -6,7 +6,7 @@
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="{{asset('storage/' . $artist->images()->first()->image)}}" class="img-responsive" alt="{{$artist->name}}">
+                    <img src="/img/{{$artist->image_url}}" class="img-responsive" alt="{{$artist->name}}">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->

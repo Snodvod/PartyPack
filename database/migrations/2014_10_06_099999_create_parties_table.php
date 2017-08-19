@@ -17,6 +17,7 @@ class CreatePartiesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
+            $table->string('image_url');
             $table->timestamps();
         });
     }

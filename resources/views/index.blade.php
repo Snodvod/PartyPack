@@ -18,37 +18,37 @@
         </div>
         <div class="row purpose">
             <div class="col-lg-3 col-lg-offset-2 text">
-                <h3>Exclusive party concepts & unforgettable experiences</h3>
-                <p>Every artist at PartyPack is selected carefully by our team. This means we don’t accept any normal
+                <h1>Exclusive party concepts & unforgettable experiences</h1>
+                <p class="homepage-p">Every artist at PartyPack is selected carefully by our team. This means we don’t accept any normal
                     job
                     applications. Just to make sure you get only the best.</p>
-                <p>People working here really like what they are doing an do it with <span>passion</span>. That’s why
+                <p class="homepage-p">People working here really like what they are doing an do it with <span>passion</span>. That’s why
                     they
                     are all
-                    artists.</p>
+                    <span>artists</span>.</p>
             </div>
             <div class="carluccio col-lg-offset-2 col-lg-3"></div>
         </div>
         <div class="row artist">
             <div class="col-lg-12">
                 <div class="row">
-                    <div style="background-image: url('/img/dynamo.jpg');" class="col-lg-offset-2 col-lg-3 picture"></div>
+                    <div style="background-image: url('/img/dynamo.jpg');" class="col-lg-offset-2 col-lg-3 picture concepts-showcase"></div>
                     <div class="col-lg-offset-2 col-lg-3 text">
-                        <h2><a href="/artists/{{$artist->id}}">{{$artist->name}}</a></h2>
-                        <p class="bio">{{$artist->bio}}</p>
-                        <a class="all" href="/artists">See all artists ></a>
+                        <h1><a href="/artists/4">Dynamo</a></h1>
+                        <p class="bio homepage-p">Growing up on the rundown Delph Hill housing estate in Bradford, with a father who spent large periods of time away in prison, Dynamo suffered with a debilitating form of Crohn?s disease as a youngster. Having been introduced to magic by his Grandad, the young Steven Frayne developed his skills as a means to fend off the bullies who teased him about his disease, quickly gaining a reputation as a unique talent within his local community with his incredible sleight of hand.</p>
+                        <a class="all" href="/artists"><b>See</b> all artists</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row concepts-wrapper">
-            <div class="col-lg-4 col-lg-offset-4 text-center"><h3>Our most popular concepts</h3></div>
+            <div class="col-lg-4 col-lg-offset-4 text-center"><h1>Our most popular concepts</h1></div>
             <div class="col-lg-8 col-lg-offset-2 concepts">
                 <div class="row">
                     @foreach($populars as $popular)
                     <a href="/concepts/{{$popular->id}}">
                         <div class="col-lg-4">
-                            <div style="background-image: url({{'/storage/' . $popular->images()->first()->image}});" class="concept">
+                            <div style="background-image: url(/img/{{$popular->image_url}});" class="concept">
                                 <div class="overlay">
                                     <div class="text">{{$popular->name}}</div>
                                 </div>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-lg-offset-8 all">
-                <a href="/concepts">Check out all our concepts ></a>
+                <a href="/concepts" class="all"><b>Check out</b> all our concepts</a>
             </div>
         </div>
     </div>

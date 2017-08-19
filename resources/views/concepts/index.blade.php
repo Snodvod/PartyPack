@@ -13,7 +13,7 @@
                     @foreach($parties as $party)
                         <div class="col-lg-4">
                             <div class="hovereffect">
-                                <img class="img-responsive" src="{{asset('/storage/' . $party->images()->first()->image)}}" alt="{{$party->name}}">
+                                <img class="img-responsive" src="/img/{{$party->image_url}}" alt="{{$party->name}}">
                                 <div class="overlay">
                                     <h2>{{$party->name}}</h2>
                                     <a class="info" href="/concepts/{{$party->id}}">Read more</a>
