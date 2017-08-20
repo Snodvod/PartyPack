@@ -33,29 +33,18 @@ class PartyController extends Controller
     public function store(Request $request)
     {
         $file = $request->file('image');
+        $path = $file->store('img/', 'upload');
+
         $artistId = $request->artist;
 
         $party = Party::create([
             'name' => $request->name,
             'description' => $request->description,
-            'image_url' => sha1(Carbon::now()) . '.' . $file->clientExtension()
+            'image_url' => basename($path)
         ]);
+        
         $party->users()->attach($artistId);
         $party->save();
-
-        if ($file) {
-            $partyId = $party->id;
-            $fileName = sha1(Carbon::now()) . '.' . $file->clientExtension();
-            $image = Image::create([
-                'image' => $fileName,
-                'imageable_id' => $partyId,
-                'imageable_type' => 'App\Party'
-            ]);
-            $image->save();
-            $file->store('img/', $fileName, 'upload');
-        }
-
-
 
         return redirect()->to('/concepts');
     }
