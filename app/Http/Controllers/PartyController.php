@@ -46,6 +46,16 @@ class PartyController extends Controller
         $party->users()->attach($artistId);
         $party->save();
 
+        if ($file) {
+            $partyId = $party->id;
+            $image = Image::create([
+                'image' => basename($path),
+                'imageable_id' => $partyId,
+                'imageable_type' => 'App\Party'
+            ]);
+            $image->save();
+        }
+
         return redirect()->to('/concepts');
     }
 }
