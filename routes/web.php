@@ -10,6 +10,8 @@ Route::resource('concepts', 'PartyController');
 Route::resource('comments', 'CommentController');
 Route::post('email/{user}', 'MailController@sendInvitation');
 Route::resource('booking', 'BookingController');
+Route::get('/roleform', 'AdminController@changeRoleForm');
+Route::post('/changerole/{id}', 'AdminController@changeRole');
 
 Route::get('/', 'HomeController@index')->name('home');
 

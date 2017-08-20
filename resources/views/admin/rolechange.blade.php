@@ -29,7 +29,18 @@
                             <tr>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <td style="width: 200px">{{$user->type->name}}<a href="/roleform"><button style="float: right;" type="submit" class="btn btn-primary">Change Role</button></a></td>
+                                <td style="width: 100px">                
+                                    <form action="{{url('/changerole/'.$user->id)}}" method="POST">            
+                                        <select style="width: 100px; margin-bottom: 8px;" name="type" class="form-control">
+                                        @foreach ($types as $type)
+                                            @if ($type->name !== $user->type->name)
+                                                <option value="{{$type->name}}">{{$type->name}}</option>
+                                            @endif
+                                        @endforeach
+                                        </select>
+                                        <button style="float: right;" type="submit" class="btn btn-primary">Change Role</button>
+                                    </form>
+                                </td>
                                 <td style="width: 80px">
                                     <form action="{{ url('/artists/'.$user->id) }}" method="POST">
                                         {!! csrf_field() !!}

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Party;
 use App\Image;
+use App\User;
 use Carbon\Carbon;
 
 class PartyController extends Controller
