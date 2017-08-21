@@ -35,7 +35,7 @@
                     <div style="background-image: url('/img/dynamo.jpg');" class="col-lg-offset-2 col-lg-3 picture concepts-showcase"></div>
                     <div class="col-lg-offset-2 col-lg-3 text">
                         <h1><a href="/artists/4">Dynamo</a></h1>
-                        <p class="bio homepage-p">Growing up on the rundown Delph Hill housing estate in Bradford, with a father who spent large periods of time away in prison, Dynamo suffered with a debilitating form of Crohn?s disease as a youngster. Having been introduced to magic by his Grandad, the young Steven Frayne developed his skills as a means to fend off the bullies who teased him about his disease, quickly gaining a reputation as a unique talent within his local community with his incredible sleight of hand.</p>
+                        <p class="bio homepage-p">Growing up on the rundown Delph Hill housing estate in Bradford, with a father who spent large periods of time away in prison, Dynamo suffered with a debilitating form of Crohn?s disease as a youngster. Having been introduced to <span>magic</span> by his Grandad, the young Steven Frayne developed his skills as a means to fend off the bullies who teased him about his disease, quickly gaining a reputation as a unique talent within his local community with his incredible <span>sleight of hand</span>.</p>
                         <a class="all" href="/artists"><b>See</b> all artists</a>
                     </div>
                 </div>

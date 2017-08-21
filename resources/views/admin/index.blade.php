@@ -78,7 +78,7 @@
                     <form action="{{ url( 'concepts/' ) }}" enctype="multipart/form-data" method="POST" class="form-inline">
                         {!! csrf_field() !!}
 
-                        <div class="form-group">
+                        <div class="form-group form-margin-right">
                             <label for="name" class="control-label">Name</label>
 
                             <div>
@@ -86,7 +86,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-margin-right">
                             <label for="description" class="control-label">Description</label>
 
                             <div>
@@ -94,17 +94,19 @@
                                        placeholder="Some Text">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-margin-right">
                             <label for="artist" class="control-label">Artist</label>
                             <div>
                             <select name="artist" class="form-control">
                                 @foreach ($users as $user)
+                                    @if ($user->type->name === "artist")
                                     <option value="{{$user->id}}">{{$user->name}}</option>
+                                    @endif
                                 @endforeach
                             </select>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-margin-right">
                             <label for="image">Image</label>
 
                             <input type="file" id="image" name="image">

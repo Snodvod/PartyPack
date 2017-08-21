@@ -12,6 +12,11 @@
                     <li class="item {{areActiveRoutes(['concepts.index', 'concepts.show'])}}"><a href="/concepts"><span>Concepts</span></a>
                     </li>
                     <li class="diamond"></li>
+                    @if(Auth::user())
+                    <li class="item {{areActiveRoutes(['bookings.index', 'bookings.show'])}}"><a href="/bookings"><span>My Bookings</span></a>
+                    </li>
+                    <li class="diamond"></li>
+                    @endif
                     @if(!Auth::user())
                         <li class="item {{isActiveRoute('login')}}"><a href="/login"><span>Login</span></a></li>
                         <li class="diamond"></li>

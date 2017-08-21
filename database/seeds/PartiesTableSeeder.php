@@ -25,13 +25,13 @@ class PartiesTableSeeder extends Seeder
 
         Party::create([
         	'name' => 'Flower Power Party',
-            'description' => $faker->text(),
+            'description' => 'Enjoy this fully-themed 70s party with its typical music, delicacies and drinks',
             'image_url' => 'flower.jpg'
         ]);
 
         Party::create([
         	'name' => 'Illusionist magic party',
-            'description' => $faker->text(),
+            'description' => "Be tricked and deceived by magic. This party isn't your typical pulling-a-rabbit-out-of-your-hat, our magician will make people disappear and cut them in half, magically of course.",
             'image_url' => 'magician.jpg'
         ]);
     }

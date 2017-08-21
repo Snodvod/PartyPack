@@ -4,8 +4,8 @@
     <div class="row content concept{{$party->id}} concept-detail">
         <div class="col-lg-offset-3 col-lg-9">
             <div class="row" style="margin-left: -10px;">
-                <div class="col-lg-4">
-                    <h1>{{$party->name}}</h1>
+                <div class="col-lg-6">
+                    <h1>{{$party->name}} <a href="/bookings"><button type="submit" class="btn btn-primary">Book this party</button></a></h1>
                 </div>
             </div>
             <div class="description row">
