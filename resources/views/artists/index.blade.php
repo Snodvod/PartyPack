@@ -4,7 +4,7 @@
     <div class="artists-wrapper content">
         <div class="row head">
             <div class="col-lg-4 col-lg-offset-4 text-center">
-                <h2>All our artists</h2>
+                <h1><b>All our artists</b></h1>
             </div>
         </div>
         <div class="row">

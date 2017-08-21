@@ -23,8 +23,14 @@
         </div>
         <div class="col-lg-7">
             <div class="profile-content">
-                <h2>Biography</h2>
+                <h2><i class="fa fa-address-book" aria-hidden="true"></i>Biography</h2>
                 {{$artist->bio}}
+                <div style="position: relative; top: 260px;">
+                    <b>Active in following parties</b>: 
+                @foreach ($artist->parties()->get() as $party)
+                    <a href="/concepts/{{$party->id}}">{{$party->name}}</a>
+                @endforeach
+                </div>
             </div>
         </div>
     </div>

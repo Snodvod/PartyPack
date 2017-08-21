@@ -19,7 +19,7 @@
         <div class="row purpose">
             <div class="col-lg-3 col-lg-offset-2 text">
                 <h1>Exclusive party concepts & unforgettable experiences</h1>
-                <p class="homepage-p">Every artist at PartyPack is selected carefully by our team. This means we don’t accept any normal
+                <p class="homepage-p">Every artist at HelloParty is selected carefully by our team. This means we don’t accept any normal
                     job
                     applications. Just to make sure you get only the best.</p>
                 <p class="homepage-p">People working here really like what they are doing an do it with <span>passion</span>. That’s why

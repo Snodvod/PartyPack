@@ -4,7 +4,7 @@
     <div class="party-content content">
         <div class="row head">
             <div class="col-lg-4 col-lg-offset-4 text-center">
-                <h2>Our party experiences</h2>
+                <h1><b>Our party experiences</b></h1>
             </div>
         </div>
         <div class="row">
